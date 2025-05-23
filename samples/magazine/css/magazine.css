@@ -1,6 +1,6 @@
 body {
   overflow: hidden;
-  background-color: #09385000;
+  background-color: #ffffff00;
   margin: 0;
   padding: 0;
 }
@@ -471,7 +471,8 @@ body {
     bottom: 20px;
     width: 100vw;
     height: 80px;
-    background: rgba(255, 255, 255, 0.95);
+    /* Remove the white background */
+    background: none;
     overflow-x: auto;
     overflow-y: hidden;
     z-index: 1000;
