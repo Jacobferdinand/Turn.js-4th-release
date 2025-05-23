@@ -5,6 +5,7 @@ body {
   padding: 0;
 }
 
+/* Move the flipbook up */
 .magazine-viewport .container {
   position: absolute;
   top: 50%;
@@ -12,6 +13,7 @@ body {
   width: 922px;
   height: 600px;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 .magazine-viewport .magazine {
@@ -221,7 +223,7 @@ body {
 
 .magazine-viewport .previous-button-hover,
 .magazine-viewport .next-button-hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .magazine-viewport .previous-button-hover,
@@ -450,4 +452,49 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+/* Move the flipbook and thumbnails up by 20px on all screen sizes */
+.magazine-viewport .container {
+  margin-bottom: 20px;
+}
+
+.thumbnails {
+  bottom: 20px;
+}
+
+/* Responsive thumbnails bar for small screens */
+@media (max-width: 900px) {
+  .thumbnails {
+    position: fixed;
+    left: 0;
+    bottom: 20px;
+    width: 100vw;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.95);
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 1000;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .thumbnails > div {
+    height: 80px;
+    margin-bottom: 0;
+  }
+  .thumbnails ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    transform: none;
+    -webkit-transform: none;
+  }
+  .thumbnails li {
+    margin: 0 4px;
+  }
+  .thumbnails img {
+    width: 48px;
+    height: 64px;
+  }
 }
