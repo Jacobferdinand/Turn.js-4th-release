@@ -127,15 +127,22 @@ function loadApp() {
 	
 	// Create the flipbook
 
-	flipbook.turn({
+	// Detect if mobile (screen width <= 900px)
+    var isMobile = window.innerWidth <= 992;
+
+    // Set width and height based on device
+    var bookWidth = isMobile ? 600 : 1200;   // Half width on mobile
+    var bookHeight = isMobile ? 849 : 849;  // Keep height the same, or adjust as needed
+
+    flipbook.turn({
 			
 			// Magazine width
 
-			width: 1200,
+			width: bookWidth,
 
 			// Magazine height
 
-			height: 849,
+			height: bookHeight,
 
 			// Duration in millisecond
 
@@ -160,6 +167,10 @@ function loadApp() {
 			// The number of pages
 
 			pages: 26,
+
+			// Display mode: 'single' or 'double'
+
+			display: isMobile ? 'single' : 'double',
 
 			// Events
 
