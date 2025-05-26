@@ -272,6 +272,15 @@ body {
 
   z-index: 1;
 }
+@media (max-width: 992px) {
+  .zoom-icon {
+    display: none !important;
+  }
+
+  .thumbnail-wrapper {
+    display: none !important;
+  }
+}
 
 .thumbnails > div {
   width: 100%;
