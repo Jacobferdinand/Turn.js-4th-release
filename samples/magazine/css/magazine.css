@@ -434,6 +434,11 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 992px) {
+  .zoom-icon {
+    display: none !important;
+  }
+}
 .zoom-icon-in.zoom-icon-in-hover {
   background-position: -22px 0;
   cursor: pointer;
